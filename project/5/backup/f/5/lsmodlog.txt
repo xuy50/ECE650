@@ -1,0 +1,40 @@
+Module                  Size  Used by
+vboxvideo              36864  0
+ttm                   106496  1 vboxvideo
+drm_kms_helper        184320  1 vboxvideo
+fb_sys_fops            16384  1 drm_kms_helper
+syscopyarea            16384  1 drm_kms_helper
+sysfillrect            16384  1 drm_kms_helper
+sysimgblt              16384  1 drm_kms_helper
+nls_iso8859_1          16384  1
+binfmt_misc            24576  1
+crct10dif_pclmul       16384  1
+crc32_pclmul           16384  0
+ghash_clmulni_intel    16384  0
+joydev                 24576  0
+aesni_intel           372736  0
+crypto_simd            16384  1 aesni_intel
+cryptd                 24576  2 crypto_simd,ghash_clmulni_intel
+glue_helper            16384  1 aesni_intel
+input_leds             16384  0
+serio_raw              20480  0
+video                  49152  0
+vboxguest             360448  1
+sch_fq_codel           20480  3
+msr                    16384  0
+parport_pc             40960  0
+ppdev                  24576  0
+lp                     20480  0
+parport                53248  3 parport_pc,lp,ppdev
+drm                   491520  3 drm_kms_helper,vboxvideo,ttm
+efi_pstore             16384  0
+ip_tables              32768  0
+x_tables               40960  1 ip_tables
+autofs4                45056  2
+hid_generic            16384  0
+usbhid                 57344  0
+hid                   131072  2 usbhid,hid_generic
+psmouse               155648  0
+ahci                   40960  2
+libahci                32768  1 ahci
+e1000                 147456  0

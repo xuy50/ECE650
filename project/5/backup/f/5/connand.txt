@@ -1,0 +1,4 @@
+sudo dmesg
+sudo dmesg > ../knlog.txt
+lsmod
+lsmod > ../lsmodlog.txt

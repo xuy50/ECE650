@@ -1,0 +1,13 @@
+Assuming TCP uses 64-bit sequence numbers, the maximum number of bytes that can be transmitted without wrapping around is 2^64 bytes.
+
+To calculate the maximum packet lifetime required to transmit 2^64 bytes at 100 Terabits per second, we can use the following formula:
+
+Maximum packet lifetime = (2^64 bytes) / (100 x 10^12 bits/second)
+
+= (2^64 bytes) / (10^14 bytes/second)
+
+= (2^64 / 10^14) seconds
+
+= 184467440.737 seconds
+
+Therefore, the maximum packet lifetime required to prevent sequence number wrap-around even with 64-bit sequence numbers at a transmission rate of 100 Terabits per second is approximately 184,467,440.737 seconds or 5.85 years.

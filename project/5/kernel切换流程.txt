@@ -1,0 +1,17 @@
+sudo apt-get upgrade linux-image-5.4.0-104-generic
+
+/etc/default/grub
+GRUB_DEFAULT='Advanced options for Ubuntu>Ubuntu, with Linux 5.4.0-104-generic'
+
+第一步：检查目标内核版本是否存在
+sudo apt search 'linux-image-5.4.0-104-generic'
+第二步：若存在，则继续安装
+sudo apt install 'linux-image-5.4.0-104-generic'
+第三步：更新并重启
+sudo update-initramfs -u -k all
+sudo update-grub
+sudo reboot
+第四步：安装新版本内核头文件，用于开发编译
+sudo apt install linux-headers-$(uname -r)
+然后：
+sudo apt-get install build-essential kernel-package libncurses5-dev

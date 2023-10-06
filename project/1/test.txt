@@ -1,0 +1,26 @@
+// merge next
+void mergeNext(md_t *curr, md_t *newFR)
+{
+    if (curr->next != NULL)
+    {
+        newFR->size += curr->size;
+        newFR->next = curr->next;
+        curr->next->prev = newFR;
+        curr->prev = NULL;
+        curr->next = NULL;
+    }
+    else
+    {
+        newFR->size += curr->size;
+        newFR->next = NULL;
+        curr->prev = NULL;
+        curr->next = NULL;
+    }
+}	
+
+display curr
+display curr->prev
+display curr->next
+display newFR
+display newFR->prev
+display newFR->next
